@@ -9,8 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView {
+            VStack(alignment: .leading) {
+                Image("edinburgh")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Welcome to Club Somerville 👋")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding()
+                Text("Club Somerville is the best club in AND, and everyone knows it. And everyone should want to be part of it.")
+                    .padding()
+                
+                SquadsCarousel()
+                ComeFindUs()
+                
+                
+            }
+        }.edgesIgnoringSafeArea(.all)
+        
     }
 }
 
